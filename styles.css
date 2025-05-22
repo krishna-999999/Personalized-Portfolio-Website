@@ -1,0 +1,434 @@
+/* Global Styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 80%;
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+h1, h2, h3 {
+  color: #333;
+  margin-bottom: 0.75em;
+}
+
+h1 {
+  font-size: 2.8em; /* Slightly larger for main heading */
+}
+
+h2 {
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 1.5em; /* More space below section titles */
+  padding-bottom: 0.5em;
+  border-bottom: 3px solid #007bff; /* Thicker border */
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 25px; /* Slightly more spacing */
+}
+
+.nav-links li:first-child {
+  margin-left: 0;
+}
+
+.nav-link {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 4px;
+  font-weight: 500; /* Slightly bolder nav links */
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #fff;
+  background-color: #007bff;
+}
+
+/* Main Content */
+main {
+  padding-top: 70px; /* Adjust based on actual navbar height */
+}
+
+/* Sections */
+.section {
+  padding: 60px 0;
+  text-align: left;
+}
+
+.section:nth-child(even) {
+  background-color: #fff; /* Alternating background for sections */
+}
+
+/* Home Section */
+.home-section {
+  background: #007bff; /* Primary blue background */
+  color: #fff;
+  min-height: calc(100vh - 70px); /* Full viewport height minus navbar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 0; /* Already handled by main's padding-top */
+}
+
+.home-section h1 {
+  color: #fff;
+  font-size: 3.2em; /* Larger name */
+  margin-bottom: 0.3em;
+}
+
+.home-section .home-tagline {
+  font-size: 1.3em; /* Larger tagline */
+  color: #e0e0e0; /* Slightly softer white for tagline */
+  margin-top: 0;
+  margin-bottom: 30px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-section .home-details {
+  margin-top: 20px;
+  font-size: 1em;
+  text-align: left;
+  max-width: 480px; /* Adjusted width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-section .details-group {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.home-section .details-group:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.home-section .home-details p {
+  margin-bottom: 12px; /* Slightly more space between detail items */
+  color: #f0f0f0;
+  display: flex; /* For better alignment of label and value */
+  align-items: center;
+}
+
+.home-section .home-details .detail-label {
+  display: inline-flex; /* Use flex for icon and text alignment */
+  align-items: center;
+  width: 160px; /* Adjusted for potentially longer labels with icons */
+  font-weight: bold;
+  color: #fff;
+  text-align: right;
+  margin-right: 15px; /* More space between label and value */
+}
+
+.home-section .home-details .detail-label i {
+  margin-right: 10px; /* Space between icon and label text */
+  width: 20px; /* Fixed width for icon container for alignment */
+  text-align: center;
+}
+
+.home-section .home-details a {
+  color: #d1eaff; /* Bright light blue for links */
+  text-decoration: none; /* Remove underline by default */
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.home-section .home-details a:hover {
+  color: #ffffff;
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* About Me Section */
+#about .container p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  max-width: 800px; /* Limit width for readability */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify; /* Justify text for a cleaner look */
+}
+
+/* Skills Section */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Increased gap */
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.skills-list li {
+  background: #007bff;
+  color: #fff;
+  padding: 12px 22px; /* Larger padding */
+  border-radius: 25px; /* More rounded */
+  font-size: 1em;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.skills-list li:hover {
+    transform: translateY(-3px);
+    background-color: #0056b3;
+}
+
+/* Projects Section */
+.project {
+  background: #ffffff; /* Ensure white background if section is not white */
+  padding: 25px;
+  margin-bottom: 25px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.project:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+.project h3 {
+  margin-top: 0;
+  color: #007bff;
+  font-size: 1.5em;
+}
+
+.project p {
+    font-size: 1em;
+    color: #555;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 15px;
+  background: #333;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+.project a:hover {
+  background: #555;
+  color: #fff;
+}
+
+/* Contact Section */
+#contactForm label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #444;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+#contactForm button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#contactForm button[type="submit"]:hover {
+  background: #0056b3;
+}
+
+#formMessage {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 40px; /* Space above footer */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-link {
+    display: block;
+  }
+
+  main {
+    padding-top: 180px; /* Adjust if navbar becomes taller on mobile */
+  }
+
+  .home-section h1 {
+    font-size: 2.5em;
+  }
+
+  .home-section .home-tagline {
+    font-size: 1.1em;
+  }
+
+  .home-section .home-details {
+    max-width: 90%;
+  }
+
+  .home-section .home-details .detail-label {
+    width: auto; /* Allow label to shrink */
+    text-align: left;
+    margin-right: 8px;
+  }
+   .home-section .home-details p {
+    flex-direction: column; /* Stack label and value on small screens */
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  #about .container p {
+    font-size: 1em;
+    text-align: left; /* Switch from justify for smaller screens if preferred */
+  }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding-top: 180px; /* May need further adjustment */
+    }
+    .home-section h1 {
+        font-size: 2em;
+    }
+    .home-section .home-tagline {
+        font-size: 1em;
+    }
+    .skills-list li {
+        padding: 10px 18px;
+        font-size: 0.9em;
+    }
+    .project h3 {
+        font-size: 1.3em;
+    }
+    #contactForm input[type="text"],
+    #contactForm input[type="email"],
+    #contactForm textarea,
+    #contactForm button[type="submit"] {
+        font-size: 0.95em;
+    }
+}
